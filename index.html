@@ -1,41 +1,90 @@
 
-        <!DOCTYPE html>
-        <html lang="pt-br">
-        <head>
-            <meta charset="UTF-8">
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            <style>
-                :root { --cor-dma: #a93226; }
-                body { background-color: #f9f9f9; }
-                .header-dma { background-color: white; border-bottom: 4px solid var(--cor-dma); padding: 20px 0; }
-                .navbar-dma { background-color: var(--cor-dma); color: white; padding: 10px 0; font-weight: bold; }
-                .imovel-card { background: white; border: 1px solid #e0e0e0; border-radius: 4px; height: 100%; transition: 0.3s; }
-                .imovel-card:hover { box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
-                .tag-tipo { background: var(--cor-dma); color: white; padding: 2px 8px; font-size: 0.8rem; display: inline-block; }
-                .btn-detalhes { background-color: var(--cor-dma); color: white; border-radius: 0; }
-            </style>
-        </head>
-        <body>
-            <header class="header-dma text-center"><h1>DMA Imóveis</h1></header>
-            <nav class="navbar-dma text-center">Principal | Comprar | Alugar | Contato</nav>
-            <div class="container mt-5">
-                <h4 class="mb-4">IMÓVEIS EM DESTAQUE</h4>
-                <div class="row">
-        
-                    <div class="col-md-4 mb-4">
-                        <div class="imovel-card p-3">
-                            <img src="https://via.placeholder.com/300" class="img-fluid mb-3" alt="Imóvel">
-                            <div class="tag-tipo">casa</div>
-                            <h5 class="mt-2">Casa Linda</h5>
-                            <p class="text-muted small">Marica</p>
-                            <hr>
-                            <p class="fw-bold">R$ 500.000</p>
-                            <button class="btn btn-detalhes w-100">Detalhar</button>
-                        </div>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root { --cor-dma: #a93226; }
+        body { background-color: #f9f9f9; }
+        .top-bar { background: white; padding: 20px 0; border-bottom: 1px solid #eee; }
+        .navbar-dma { background-color: var(--cor-dma); color: white; padding: 15px 0; font-weight: bold; display: flex; justify-content: center; gap: 80px; }
+        .nav-item { color: white !important; text-decoration: none; font-size: 1rem; }
+        .hero-image { width: 100%; height: 400px; object-fit: cover; }
+        /* Buscador ajustado para ficar abaixo do menu */
+        .search-box { background: white; padding: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); margin: 20px auto; border-radius: 4px; max-width: 1100px; }
+        .imovel-card { background: white; border: 1px solid #e0e0e0; border-radius: 4px; height: 100%; transition: 0.3s; }
+        .btn-detalhes { background-color: var(--cor-dma); color: white; border-radius: 0; }
+        .tag-tipo { background: var(--cor-dma); color: white; padding: 3px 10px; font-size: 0.75rem; font-weight: bold; display: inline-block; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <div class="top-bar text-center"><h1>DMA Imóveis</h1></div>
+    <nav class="navbar-dma">
+        <a href="#" class="nav-item">Principal</a>
+        <a href="#" class="nav-item">Comprar</a>
+        <a href="#" class="nav-item">Alugar</a>
+        <a href="#" class="nav-item">Informações</a>
+        <a href="#" class="nav-item">Contato</a>
+    </nav>
+    
+    <div class="container">
+        <div class="search-box">
+            <div class="row g-2 align-items-center">
+                <div class="col-md-3"><input type="text" class="form-control" placeholder="Ref..."></div>
+                <div class="col-md-3"><select class="form-select"><option>Operação</option></select></div>
+                <div class="col-md-2"><select class="form-select"><option>Maricá</option></select></div>
+                <div class="col-md-3"><select class="form-select"><option>Bairros</option></select></div>
+                <div class="col-md-1"><button class="btn btn-secondary w-100">🔍</button></div>
+            </div>
+        </div>
+    </div>
+
+    <img src="assets/hero-home.jpg" class="hero-image" alt="Destaque">
+    
+    <div class="container mt-5">
+        <h4 class="mb-4">IMÓVEIS EM DESTAQUE</h4>
+        <div class="row">
+
+            <div class="col-md-4 mb-4">
+                <div class="imovel-card p-3">
+                    <img src="assets/centro.jpg" class="img-fluid mb-3" alt="Imóvel">
+                    <div class="tag-tipo">Centro</div>
+                    <h5>CASA - VENDA - 2 QUARTOS ( 1 SUÍTE ) - 1 ª LOCAÇÃO</h5>
+                    <p class="text-muted small">Condomínio do Edifício Avenida</p>
+                    <hr>
+                    <div class="row text-center mb-3">
+                        <div class="col"><strong>2</strong><br><small>Quartos</small></div>
+                        <div class="col"><strong>2</strong><br><small>Suítes</small></div>
+                        <div class="col"><strong>2</strong><br><small>Vagas</small></div>
                     </div>
-            
+                    <div class="d-flex justify-content-between mb-3">
+                        <small>Ref: 3031</small>
+                        <small>Área: 36.49m²</small>
+                    </div>
+                    <p class="text-danger fw-bold fs-5">R$ 500.000</p>
+                    <button class="btn btn-detalhes w-100">Detalhar</button>
                 </div>
             </div>
-        </body>
-        </html>
-        
+
+            <div class="col-md-4 mb-4">
+                <div class="imovel-card p-3">
+                    <img src="" class="img-fluid mb-3" alt="Imóvel">
+                    <div class="tag-tipo"></div>
+                    <h5></h5>
+                    <p class="text-muted small">LOJA - VENDA - EDIFÍCIO AVENIDA - CENTRO</p>
+                    <hr>
+                    <div class="row text-center mb-3">
+                        <div class="col"><strong></strong><br><small>Quartos</small></div>
+                        <div class="col"><strong></strong><br><small>Suítes</small></div>
+                        <div class="col"><strong></strong><br><small>Vagas</small></div>
+                    </div>
+                    <div class="d-flex justify-content-between mb-3">
+                        <small>Ref: </small>
+                        <small>Área: m²</small>
+                    </div>
+                    <p class="text-danger fw-bold fs-5">R$ </p>
+                    <button class="btn btn-detalhes w-100">Detalhar</button>
+                </div>
+            </div>
+</div></div></body></html>
