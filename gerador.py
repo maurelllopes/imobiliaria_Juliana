@@ -2,7 +2,7 @@ import csv
 import urllib.request
 
 csv_url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQQx0VU7pIYtm5ysb0mcPEcwRxrum9k7deANBFjtPg5fE1rZ_fxAIh9XsUEYehEUNli9ohBzFY9wxYp/pub?output=csv'
-
+##
 def gerar_site():
     print("Gerando site profissional...")
     with urllib.request.urlopen(csv_url) as response:
